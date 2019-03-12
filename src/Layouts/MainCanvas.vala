@@ -51,6 +51,7 @@ public class Akira.Layouts.MainCanvas : Gtk.Grid {
 									"stroke-color", "#f37329",
 									"fill-color", "#ffa154", null);
 		rect.set ("parent", root);
+		rect.set_transform(Cairo.Matrix.identity ());
 		return  rect;
 	}
 
@@ -62,6 +63,7 @@ public class Akira.Layouts.MainCanvas : Gtk.Grid {
 			"fill-color", "#68b723");
 
 		ellipse.set ("parent", root);
+		ellipse.set_transform(Cairo.Matrix.identity ());
 		return ellipse;
 	}
 
@@ -69,6 +71,7 @@ public class Akira.Layouts.MainCanvas : Gtk.Grid {
 		var root = canvas.get_root_item ();
 		var text = new Goo.CanvasText (null, "Add text here", 20, 20, 200, Goo.CanvasAnchorType.NW, "font", "Open Sans 18");
 		text.set ("parent", root);
+		text.set_transform(Cairo.Matrix.identity ());
 		return text;
 	}
 }
